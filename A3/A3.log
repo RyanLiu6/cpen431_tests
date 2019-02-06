@@ -1,7 +1,7 @@
 CPEN 431 EVALUATION test Client
-Time: Sun Feb 03 13:36:57 PST 2019
+Time: Mon Feb 04 14:47:40 PST 2019
 Build Date: Sat Feb 02 17:04:35 PST 2019
-Java process ID: 49391
+Java process ID: 8593
 
 [Info] A3 Client running in TEST mode.
 
@@ -47,118 +47,124 @@ TEST_PASSED
 TEST_PASSED
 
 [ TEST At-Most-Once Client Policy (PUT -> REM -> REM). Value length =  32 Bytes ]
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-TEST_UNDECIDED
+TEST_PASSED
 
 [ TEST At-Most-Once Client Policy Empty REMs (EMPTY -> REM -> REM) ]
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-TEST_UNDECIDED
+TEST_PASSED
 
 [ TEST At-Most-Once Client Policy Error Return Code (REM -> PUT -> REM) ]
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-Second REM timeout!
-TEST_UNDECIDED
+TEST_PASSED
 
 [ TEST Multi Client Performance (1 clients, 60.0 seconds): PUT -> GET (closed loop) ]
 Test time limit reached: 60.0s.
-Test completed after 28987 closed loops.
+Test completed after 19799 closed loops.
 [Test] Checking if server is up ...
 Test Passed. Server is ok.
 Test Status: TEST_PASSED
 Clients: 1
-Total Requests (without replies): 57974
-Total Requests (including replies): 58002
-Successful Responses: 57967
-Timeout Responses: 7
+Total Requests (without replies): 39598
+Total Requests (including replies): 39630
+Successful Responses: 39590
+Timeout Responses: 8
 Total Failed Responses: 0
-% Success: 99.98792562183047
-% Timeout: 0.01207437816952427
+% Success: 99.9797969594424
+% Timeout: 0.02020304055760392
 % Failed: 0.0
 Response Time (Successful requests):
-[max] 19ms, [min] 0ms
-[avg] 0.20351234322976866 ms, [stdev] 0.4163860596619964ms
-Throughput: 935.0343537305248 requests per second
-Goodput: 934.9214541466405 requests per second
-Retry Rate (Successful requests): 1.000482975126781
+[max] 42ms, [min] 0ms
+[avg] 0.14635008840616318 ms, [stdev] 0.4160837997454301ms
+Throughput: 654.2312394673363 requests per second
+Goodput: 654.0990648646863 requests per second
+Retry Rate (Successful requests): 1.0008081216223041
 
 [ TEST Multi Client Performance (2 clients, 60.0 seconds): PUT -> GET (closed loop) ]
 Test time limit reached: 60.0s.
-Test completed after 34652 closed loops.
+Test completed after 14923 closed loops.
 Test time limit reached: 60.0s.
-Test completed after 15484 closed loops.
+Test completed after 26010 closed loops.
 [Test] Checking if server is up ...
 Test Passed. Server is ok.
 Test Status: TEST_PASSED
 Clients: 2
-Total Requests (without replies): 100272
-Total Requests (including replies): 100324
-Successful Responses: 100259
-Timeout Responses: 13
+Total Requests (without replies): 81866
+Total Requests (including replies): 81934
+Successful Responses: 81849
+Timeout Responses: 17
 Total Failed Responses: 0
-% Success: 99.9870352640817
-% Timeout: 0.012964735918302219
+% Success: 99.97923435858598
+% Timeout: 0.02076564141401803
 % Failed: 0.0
 Response Time (Successful requests):
-[max] 58ms, [min] 0ms
-[avg] 0.2638466372096271 ms, [stdev] 0.5761725733131019ms
-Throughput: 1666.3398421271293 requests per second
-Goodput: 1666.123805567096 requests per second
-Retry Rate (Successful requests): 1.000518589436732
+[max] 41ms, [min] 0ms
+[avg] 0.14883504990897872 ms, [stdev] 0.4373670697704335ms
+Throughput: 1264.2421434638252 requests per second
+Goodput: 1263.9796154737087 requests per second
+Retry Rate (Successful requests): 1.0008306256565607
 
 [ TEST Multi Client Performance (4 clients, 60.0 seconds): PUT -> GET (closed loop) ]
-Logic error after 1 closed loops. GET Value != PUT Value.
-Put:1475008107, Get:1604797857
 Test time limit reached: 60.0s.
-Test completed after 39272 closed loops.
+Test completed after 27300 closed loops.
 Test time limit reached: 60.0s.
-Test completed after 15293 closed loops.
+Test completed after 37328 closed loops.
 Test time limit reached: 60.0s.
-Test completed after 16755 closed loops.
-Test Failed. Logic Error.
-Test Aborted!
-Test Status: TEST_FAILED
+Test completed after 22951 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 19788 closed loops.
+[Test] Checking if server is up ...
+Test Passed. Server is ok.
+Test Status: TEST_PASSED
 Clients: 4
-Total Requests (without replies): 142642
-Total Requests (including replies): 142690
-Successful Responses: 142630
-Timeout Responses: 12
+Total Requests (without replies): 214734
+Total Requests (including replies): 214806
+Successful Responses: 214716
+Timeout Responses: 18
 Total Failed Responses: 0
-% Success: 99.99158733051976
-% Timeout: 0.008412669480237236
+% Success: 99.99161753611445
+% Timeout: 0.008382463885551427
 % Failed: 0.0
 Response Time (Successful requests):
-[max] 93ms, [min] 0ms
-[avg] 0.580719343756573 ms, [stdev] 0.8531286507160677ms
-Throughput: 2319.94795478572 requests per second
-Goodput: 2319.7527852321705 requests per second
-Retry Rate (Successful requests): 1.0003365067792096
-Test did not pass. Aborting. Maximum Clients = 4
+[max] 95ms, [min] 0ms
+[avg] 0.47933083701261203 ms, [stdev] 0.852628579391439ms
+Throughput: 3272.436337036529 requests per second
+Goodput: 3272.1620262423994 requests per second
+Retry Rate (Successful requests): 1.0003352985554221
+
+[ TEST Multi Client Performance (8 clients, 60.0 seconds): PUT -> GET (closed loop) ]
+Test time limit reached: 60.0s.
+Test completed after 15613 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 18556 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 10984 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 15062 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 16356 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 16901 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 21233 closed loops.
+Test time limit reached: 60.0s.
+Test completed after 13121 closed loops.
+[Test] Checking if server is up ...
+Test Passed. Server is ok.
+Test Status: TEST_PASSED
+Clients: 8
+Total Requests (without replies): 255652
+Total Requests (including replies): 255720
+Successful Responses: 255635
+Timeout Responses: 17
+Total Failed Responses: 0
+% Success: 99.99335033561248
+% Timeout: 0.006649664387526794
+% Failed: 0.0
+Response Time (Successful requests):
+[max] 85ms, [min] 0ms
+[avg] 1.268194887241575 ms, [stdev] 1.5025298731919738ms
+Throughput: 3900.0472914219463 requests per second
+Goodput: 3899.787951366112 requests per second
+Retry Rate (Successful requests): 1.000265986575501
+
 
 [ TEST Multi Client Crash: PUT -> GET (closed loop) + REM -> WIPEOUT (closed loop) ]
 [Test isAlive]
@@ -167,9 +173,6 @@ TEST_PASSED
 Pausing for 10 seconds to wait for the cache to be cleared!
 
 [ TEST Single Client Capacity (Value Size = 10000 bytes, Limit = 7340 PUTs, ~69.99969482421875 MiB) : PUT -> GET (closed loop) ]
-[Info] Received OVERLOAD from the server. Sleeping for [2500] ms.
-[Info] Received OVERLOAD from the server. Sleeping for [2500] ms.
-[Info] Received OVERLOAD from the server. Sleeping for [2500] ms.
 [Info] Received OVERLOAD from the server. Sleeping for [2500] ms.
 [Info] Received OVERLOAD from the server. Sleeping for [2500] ms.
 [Info] Received OVERLOAD from the server. Sleeping for [2500] ms.
@@ -202,11 +205,9 @@ TEST_PASSED
 TEST_PASSED
 
 Sending SHUTDOWN to 1 servers.
-[ ... Completed in 0.007 seconds ]
+[ ... Completed in 6.466 seconds ]
 [Test isAlive] for localhost:18141
->>> Server node localhost is not down as expected.
-[ ... Completed in 0.005 seconds ]
-Warning: Server is still up after being issued shutdown command!
+[ ... Completed in 64.798 seconds ]
 Results Summary:
 Basic PUT GET  : 2.0
 Double PUT with version : 2.0
@@ -216,24 +217,29 @@ Double PUT with version : 2.0
 Remove Operation : 2.0
 Double Remove : 2.0
 Invalid Command : 2.0
-At-Most-Once Policy : 1.0
-At-Most-Once Policy Empty REMs : 1.0
-At-Most-Once Policy Error Return Code : 1.0
-1 Client(s) Throughput (Requests per Second) : 936.0
-1 Client(s) Goodput (Requests per Second) : 935.0
-1 Client(s) Maximum Response Time (ms) : 19.0
+At-Most-Once Policy : 2.0
+At-Most-Once Policy Empty REMs : 2.0
+At-Most-Once Policy Error Return Code : 2.0
+1 Client(s) Throughput (Requests per Second) : 655.0
+1 Client(s) Goodput (Requests per Second) : 655.0
+1 Client(s) Maximum Response Time (ms) : 42.0
 1 Client(s) Average Response Time (ms) : 1.0
 1 Client(s) STDEV Response Time (ms) : 1.0
-2 Client(s) Throughput (Requests per Second) : 1667.0
-2 Client(s) Goodput (Requests per Second) : 1667.0
-2 Client(s) Maximum Response Time (ms) : 58.0
+2 Client(s) Throughput (Requests per Second) : 1265.0
+2 Client(s) Goodput (Requests per Second) : 1264.0
+2 Client(s) Maximum Response Time (ms) : 41.0
 2 Client(s) Average Response Time (ms) : 1.0
 2 Client(s) STDEV Response Time (ms) : 1.0
-4 Client(s) Throughput (Requests per Second) : 2320.0
-4 Client(s) Goodput (Requests per Second) : 2320.0
-4 Client(s) Maximum Response Time (ms) : 93.0
+4 Client(s) Throughput (Requests per Second) : 3273.0
+4 Client(s) Goodput (Requests per Second) : 3273.0
+4 Client(s) Maximum Response Time (ms) : 95.0
 4 Client(s) Average Response Time (ms) : 1.0
 4 Client(s) STDEV Response Time (ms) : 1.0
+8 Client(s) Throughput (Requests per Second) : 3901.0
+8 Client(s) Goodput (Requests per Second) : 3900.0
+8 Client(s) Maximum Response Time (ms) : 85.0
+8 Client(s) Average Response Time (ms) : 2.0
+8 Client(s) STDEV Response Time (ms) : 2.0
 Multi-Client Crash : 2.0
 Single Client Capacity (MiB) for value size of 10000 : 35.0
 Single Client Capacity Test 1 : 2.0
@@ -241,8 +247,8 @@ Single Client Capacity (MiB) for value size of 500 : 34.0
 Single Client Capacity Test 2 : 2.0
 Invalid Key Test : 2.0
 Invalid Value Test : 2.0
-Shutdown Test : 0.0
-Result Verification Code : 14362.0
+Shutdown Test : 2.0
+Result Verification Code : 5919.0
 
 Completed A3 Tests.
-Testing completed in 616.006s
+Testing completed in 614.911s
