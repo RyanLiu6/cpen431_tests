@@ -1,0 +1,146 @@
+CPEN 431 EVALUATION test Client
+Time: Sat Feb 23 18:23:58 PST 2019
+Build Date: Sat Feb 23 18:15:29 PST 2019
+Java process ID: 12394
+Client Version: 2
+
+[Info] A6 client running in TEST mode.
+
+[Info] Starting A6 Tests
+
+[Info] Skipping tests of local deployment since not running in submit mode.
+[Info] You must have a local deployment of your KVS on 127.0.0.1 (localhost), port 43100 to run in submit mode!
+
+[Info] Done building nodes' list.
+[Info] The deployment has 3 server nodes.
+[Test isAlive] for localhost:1234
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.034 seconds ]
+[OK]
+
+[ TEST Basic PUT/GET (PUT -> GET). Value Length = 8 Bytes ]
+TEST_PASSED
+
+[ TEST Basic PUT/GET (PUT -> GET). Value Length = 32 Bytes ]
+TEST_PASSED
+
+[ TEST Basic PUT/GET (PUT -> GET). Value Length = 2048 Bytes ]
+TEST_PASSED
+
+[ TEST Basic PUT/GET (PUT -> GET). Value Length = 10000 Bytes ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+
+[ TEST Basic KVS with message version (PUT Version 1 -> GET -> PUT Version 2 -> GET). Value Length = 8 Bytes ]
+TEST_PASSED
+
+
+[ TEST Basic KVS with message version (PUT Version 1 -> GET -> PUT Version 2 -> GET). Value Length = 32 Bytes ]
+TEST_PASSED
+
+
+[ TEST Basic KVS with message version (PUT Version 1 -> GET -> PUT Version 2 -> GET). Value Length = 2048 Bytes ]
+TEST_PASSED
+
+
+[ TEST Basic KVS with message version (PUT Version 1 -> GET -> PUT Version 2 -> GET). Value Length = 10000 Bytes ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[ TEST Basic REMOVE (PUT -> GET -> REM -> GET). Value Length = 32 Bytes. ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[ TEST Double remove (PUT -> REM -> REM). Value Length = 32 Bytes. ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[ TEST Invalid Command. ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[ TEST At-Most-Once Client Policy (PUT -> REM -> REM). Value length =  32 Bytes ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[ TEST At-Most-Once Client Policy Empty REMs (EMPTY -> REM -> REM) ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[ TEST At-Most-Once Client Policy Error Return Code (REM -> PUT -> REM) ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[TEST Invalid Key ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[TEST Invalid Value ]
+TEST_PASSED
+Sending WIPE-OUT to all servers...
+[ ... Completed in 0.001 seconds ]
+[OK]
+
+[ TEST Single Front-End Performance (1 clients, 60.0 seconds): PUT -> GET (closed loop) ]
+[Test isAlive] for localhost:1234
+[ ... Completed in 0.003 seconds ]
+Single Front-End: Test Status: TEST_PASSED
+Clients: 1
+Total Requests (without replies): 13396
+Total Requests (including replies): 13432
+Successful Responses: 13388
+Timeout Responses: 8
+Total Failed Responses: 0
+% Success: 99.94028068080024
+% Timeout: 0.059719319199761124
+% Failed: 0.0
+Response Time (Successful requests):
+[max] 4477ms, [min] 0ms
+[avg] 0.6422169106662683 ms, [stdev] 38.71050250395288ms
+Throughput: 216.44504047438238 requests per second
+Goodput: 216.31578096976943 requests per second
+Retry Rate (Successful requests): 1.0026873693639893
+Sending WIPE-OUT to all servers...
+Could not create _socket!
+Could not create _socket!
+Exception in thread "Thread-36" Exception in thread "Thread-37" java.lang.NullPointerException
+	at ca.NetSysLab.Network.UDPClient.setTimeout(UDPClient.java:89)
+	at ca.NetSysLab.RequestReply.RRClientAPI.sendAndReceive(RRClientAPI.java:94)
+	at ca.NetSysLab.RequestReply.RRClientAPI.sendAndReceive(RRClientAPI.java:115)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.send(KVSClientAPI.java:245)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.sendRequest(KVSClientAPI.java:220)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.sendRequest(KVSClientAPI.java:216)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.wipeout(KVSClientAPI.java:426)
+	at ca.NetSysLab.Tests.TestsPool.testWipeoutLite(TestsPool.java:511)
+	at ca.NetSysLab.Tests.TestsPool$5.run(TestsPool.java:540)
+java.lang.NullPointerException
+	at ca.NetSysLab.Network.UDPClient.setTimeout(UDPClient.java:89)
+	at ca.NetSysLab.RequestReply.RRClientAPI.sendAndReceive(RRClientAPI.java:94)
+	at ca.NetSysLab.RequestReply.RRClientAPI.sendAndReceive(RRClientAPI.java:115)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.send(KVSClientAPI.java:245)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.sendRequest(KVSClientAPI.java:220)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.sendRequest(KVSClientAPI.java:216)
+	at ca.NetSysLab.KeyValue.KVSClientAPI.wipeout(KVSClientAPI.java:426)
+	at ca.NetSysLab.Tests.TestsPool.testWipeoutLite(TestsPool.java:511)
+	at ca.NetSysLab.Tests.TestsPool$5.run(TestsPool.java:540)
+Could not complete the tests!
+Exception: java.lang.NullPointerException
