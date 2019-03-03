@@ -1,0 +1,8 @@
+Click==7.0
+Flask==1.0.2
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+ping3==1.4.1
+psutil==5.5.0
+Werkzeug==0.14.1
