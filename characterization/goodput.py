@@ -5,6 +5,7 @@ import os
 from multiprocessing.pool import ThreadPool
 from setupServers import createSSHClient
 
+SIMULTANEOUS_CLIENTS = 10
 baseCommand = ["java -jar cpen431_closedloop_2019_v1.jar ", "serverlist.txt" ," single 32 60"]
 outputLock = threading.Lock()
 
@@ -41,12 +42,19 @@ def runTests(servers, outputFileName, port):
     for server in allServers:
         t = threading.Thread(target=runOneTest, args=[server, outputFileName])
         threads.append(t)
-        
-    for t in threads:
-        t.start()
     
-    for t in threads:
-        t.join()
+    for i in range(0, len(threads), SIMULTANEOUS_CLIENTS):
+        for j in range(i, i + SIMULTANEOUS_CLIENTS):
+            if(j >= len(threads)):
+                break
+            t = threads[j]
+            t.start()
+            
+        for j in range(i, i + SIMULTANEOUS_CLIENTS):
+            if(j >= len(threads)):
+                break
+            t = threads[j]
+            t.join()
         
     print('all threads done')
         
@@ -73,17 +81,20 @@ def runOneTest(server, outputFileName):
     
     # Set up the echo command and direct the output to a pipe
     try:
-        p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         
         goodput = '0'
         
         # Run the command
         output, error = p.communicate()
         
-        for line in output.decode().split('\r\n'):
+        for line in output.decode().split('\n'):
             parsedLine = line.split(' ')
             if len(parsedLine) > 0 and 'Goodput:' == parsedLine[0]:
                 goodput = parsedLine[1]
+                
+        if(goodput == '0'):
+            print(output)
     except:
         print('Error occurred when attempting to test ' + hostname)
     else:
@@ -123,7 +134,8 @@ def checkMemCpu(server, sleepTime, numSeconds):
     
     try:
         ssh = createSSHClient(hostname)
-    except:
+    except Exception as e:
+        print(e)
         print('Error attempting to ssh into ' + hostname)
     else:
         try:

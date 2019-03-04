@@ -66,12 +66,12 @@ def setupOneServer(hostname, port):
             else:
                 ## start server
                 try:
-                    ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command('jdk1.8.0_201/bin/java -Xmx64M -jar A8.jar 44 evalServer.txt 0', timeout=1)
-                    ssh_stdout.channel.settimeout = 1
+                    ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command('jdk1.8.0_201/bin/java -Xmx64M -jar A8.jar 44 evalServer.txt 0', timeout=3)
+                    ssh_stdout.channel.settimeout = 3
+                    confirmation = ssh_stdout.readline()
                 except:
                     print('Error attempting to start server on ' + hostname)
                 else:
-                    confirmation = ssh_stdout.readline()
                     if 'Starting' not in confirmation:
                         print('Error starting server on ' + hostname)
                         print(confirmation)
