@@ -5,7 +5,7 @@ def pingServers(input, output):
     resultFile = open(output, "w")
 
     for line in serverFile:
-        hostname = line.split(":")[0]
+        hostname = line.split("\n")[0]
         resultFile.write(hostname + ":" + str(ping(hostname, unit="ms")) + "\n")
 
     serverFile.close()
